@@ -22,7 +22,7 @@ const Main = () => {
     return (
         <Card className={classes.root} style={{ opacity: '0.9' }}>
             <CardHeader
-                title="Expense Tracker"
+                title="Adeesh's Expense Manager"
                 subheader="Powered by Speechly"
             />
             <CardContent>
