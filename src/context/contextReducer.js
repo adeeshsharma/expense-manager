@@ -9,10 +9,15 @@ const contextReducer = (state, action) => {
             transactions = state.filter(
                 transaction => transaction.id !== payload
             )
+
+            localStorage.setItem('transactions', JSON.stringify(transactions))
             return transactions
 
         case 'ADD_TRANSACTION':
             transactions = [payload, ...state]
+
+            localStorage.setItem('transactions', JSON.stringify(transactions))
+
             return transactions
 
         default:
