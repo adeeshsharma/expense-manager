@@ -4,10 +4,11 @@ import { Doughnut } from 'react-chartjs-2'
 
 //hook
 import useStyles from './styles'
+import useTransactions from '../../useTransactions'
 
 const Details = ({ title }) => {
     const classes = useStyles()
-
+    const { total, chartData } = useTransactions(title)
     return (
         <Card
             className={title === 'Income' ? classes.income : classes.expense}
@@ -15,8 +16,10 @@ const Details = ({ title }) => {
         >
             <CardHeader title={title} />
             <CardContent>
-                <Typography variant="h5">₹100</Typography>
-                {/* <Doughnut data="DATA" /> */}
+                <Typography variant="h5">
+                    ₹{total}
+                </Typography>
+                <Doughnut data={chartData} />
             </CardContent>
         </Card>
     )

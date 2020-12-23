@@ -5,10 +5,16 @@ import App from './App'
 import './index.css'
 
 import { Provider } from './context/context'
+import { SpeechProvider } from '@speechly/react-client'
 
 ReactDom.render(
-    <Provider>
-        <App />
-    </Provider>,
+    <SpeechProvider
+        appId="a948afa0-f7bd-4a37-91c4-743a7ccdb151"
+        language="en-US"
+    >
+        <Provider>
+            <App />
+        </Provider>
+    </SpeechProvider>,
     document.getElementById('root')
 )

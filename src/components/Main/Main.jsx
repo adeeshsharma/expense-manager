@@ -30,8 +30,8 @@ const Main = () => {
                     style={{ lignHeight: '1.5em', marginTop: '20px' }}
                 >
                     {/* InfoCard */}
-                    Try Saying : Add income for ₹100 in category salary for
-                    monday
+                    <b>Try Saying :</b> Add income of ₹100 in category salary
+                    for monday
                 </Typography>
 
                 <Divider />
